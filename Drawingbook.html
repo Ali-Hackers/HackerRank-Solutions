@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function drawingBook(n, p) {
+   
+    const frontTurns = Math.floor(p / 2);
+    console.log(frontTurns,'d')
+       const backTurns = Math.floor(n / 2) - Math.floor(p / 2);
+    
+  
+    return Math.min(frontTurns, backTurns);
+}
+console.log(drawingBook(5, 4));  
+console.log(drawingBook(6, 2));  
+console.log(drawingBook(7, 3));  
+
+</script>
+</html>
