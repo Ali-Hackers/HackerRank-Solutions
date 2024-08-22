@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function countingValleys(steps, path) {
+    let altitude = 0;       // Start at sea level
+    let valleyCount = 0;    // Initialize the valley count
+
+    for (let i = 0; i < steps; i++) {
+        if (path[i] === 'U') {
+            altitude += 1;  // Going up increases altitude by 1
+        } else if (path[i] === 'D') {
+            altitude -= 1;  // Going down decreases altitude by 1
+        }
+
+        // Check if we just came up to sea level
+        if (altitude === 0 && path[i] === 'U') {
+            valleyCount += 1;  // Increment the valley count when coming up from below sea level
+        }
+    }
+
+    return valleyCount;  // Return the number of valleys
+}
+
+// Example usage:
+const steps = 8;
+const path = "UDDDUDUU";
+console.log(countingValleys(steps, path));  // Output should be 1
+
+    </script>
+</body>
+</html>
