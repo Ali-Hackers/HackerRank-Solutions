@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+function growth(n) {
+    let h=1
+    for (let i = 1; i <= n; i++) {
+        h = (i % 2 == 0) ? h + 1 : h * 2;
+    }
+    return h
+}
+let res=growth(7)
+console.log(res)
+</script>
+
+</html>
