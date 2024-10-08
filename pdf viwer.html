@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  function calculateArea(heights, word) {
+
+    word = word.toLowerCase();
+console.log(word)
+    
+    let maxh = 0;
+
+    
+    for (let i = 0; i < word.length; i++) {
+        let char = word[i];
+        // console.log(char)
+        let charindx = char.charCodeAt(0) - 97; 
+        // console.log(charindx)
+    
+        let charh = heights[charindx];
+        
+    
+        if (charh > maxh) {
+            maxh = charh;
+        }
+    }
+
+    
+    let width = word.length;
+console.log(word.length)
+    
+    let area = maxh * width;
+
+    return area;
+}
+
+
+let heights = [1, 3, 1, 3, 1, 4, 1, 1, 3, 1, 1, 1, 1, 2, 3, 1, 2, 3, 2, 1, 2, 1, 1, 1, 1, 1]; // heights for a-z
+let word = "abc";
+
+let area = calculateArea(heights, word);
+console.log( area);
+
+
+</script>
+
+</html>
